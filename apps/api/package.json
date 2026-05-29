@@ -14,8 +14,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@prisma/client": "^6.19.3",
     "fastify": "^5.8.5",
-    "jiti": "^2.7.0"
+    "jiti": "^2.7.0",
+    "prisma": "^6.19.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
