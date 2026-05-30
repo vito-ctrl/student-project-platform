@@ -9,7 +9,7 @@ export default [
         files: ["**/*.{ts,js}"],
         languageOptions: {
             globals: {
-                ...globals.node, // 👈 IMPORTANT (backend = Node)
+                ...globals.node,
             },
         },
     },
