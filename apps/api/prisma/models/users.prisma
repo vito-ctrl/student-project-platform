@@ -1,0 +1,14 @@
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  githubHandle String?
+  avatarUrl    String?
+
+  skills       String[]
+
+  memberships  ProjectMembership[]
+  contributions Contribution[]
+  applications Application[]
+  exports      PortfolioExport[]
+  assignedTasks Task[]
+}
