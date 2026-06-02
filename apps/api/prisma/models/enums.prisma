@@ -1,0 +1,29 @@
+enum ProjectRole {
+  OWNER
+  MEMBER
+}
+
+enum ProjectStatus {
+  RECRUITING
+  ACTIVE
+  COMPLETED
+  ARCHIVED
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+}
+
+enum ApplicationStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+enum ContributionType {
+  TASK_COMPLETED
+  COMMIT
+  REVIEW
+}

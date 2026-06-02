@@ -1,0 +1,18 @@
+model Task {
+  id          String @id @default(cuid())
+
+  title       String
+  description String?
+
+  status      TaskStatus
+
+  deadline    DateTime?
+
+  projectId   String
+  project     Project @relation(fields: [projectId], references: [id])
+
+  assignedUserId String?
+  assignedUser   User? @relation(fields: [assignedUserId], references: [id])
+
+  contributions Contribution[]
+}
