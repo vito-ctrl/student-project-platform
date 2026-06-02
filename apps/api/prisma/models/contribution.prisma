@@ -1,0 +1,17 @@
+model Contribution {
+  id        String @id @default(cuid())
+
+  userId    String
+  projectId String
+  taskId    String?
+
+  type      ContributionType
+
+  metadata  Json
+
+  user       User    @relation(fields: [userId], references: [id])
+  project    Project @relation(fields: [projectId], references: [id])
+  task       Task?   @relation(fields: [taskId], references: [id])
+
+  createdAt DateTime @default(now())
+}
