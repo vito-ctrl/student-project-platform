@@ -6,6 +6,12 @@ export default [
     js.configs.recommended,
     ...tseslint.configs.recommended,
     {
+        ignores: [
+        "dist/**",
+        "node_modules/**",
+        ],
+    },
+    {
         files: ["**/*.{ts,js}"],
         languageOptions: {
             globals: {
