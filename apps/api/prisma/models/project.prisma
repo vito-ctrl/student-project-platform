@@ -1,0 +1,16 @@
+model Project {
+    id String @id @default(cuid())
+    title String
+    goal String
+    timeline String?
+
+    status ProjectStatus
+
+    techStack String[]
+
+    memberships ProjectMembership[]
+    tasks       Task[]
+    applications Application[]
+    exports      PortfolioExport[]
+    contributions Contribution[]
+}

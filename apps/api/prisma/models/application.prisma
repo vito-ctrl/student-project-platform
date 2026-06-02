@@ -1,0 +1,16 @@
+model Application {
+  id            String @id @default(cuid())
+
+  userId         String
+  projectId      String
+
+  roleRequested  String
+  message        String?
+
+  status         ApplicationStatus
+
+  user           User    @relation(fields: [userId], references: [id])
+  project        Project @relation(fields: [projectId], references: [id])
+
+  createdAt      DateTime @default(now())
+}
