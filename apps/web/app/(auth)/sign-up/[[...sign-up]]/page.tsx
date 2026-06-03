@@ -1,9 +1,12 @@
-import { SignUp } from '@clerk/nextjs'
+import { getToken, SignUp } from '@clerk/nextjs'
 
 const SignUpPage = () => {
   return (
     <div className='flex justify-center'>
-        <SignUp/>
+        <SignUp
+          signInUrl='/sign-in'
+          routing='path'
+        />
     </div>
   )
 }
